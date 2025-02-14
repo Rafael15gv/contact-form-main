@@ -12,52 +12,52 @@
   <body>
     <main class="container">
       <h2>Contact Us</h2>
-      <form action="">
+      <form action="" id="miFormulario">
         <section class="flex" id="name">
           <div class="two-box">
-            <p><label for="">First Name</label></p>
-            <input type="text" name="fname" id="fname" class="one-box" required>
-            <p class="error">This field is required</p>
+            <p><label for="fname">First Name</label></p>
+            <input type="text" name="fname" id="fname" class="one-box mouse">
+            <p class="error" id="prueba">This field is required</p>
           </div>
     
           <div class="two-box">
             <p><label for="">Last Name</label></p>
-            <input type="text" name="lname" id="lname" class="one-box" required>
-            <p class="error">This field is required</p>
+            <input type="text" name="lname" id="lname" class="one-box mouse">
+            <p class="error" id="prueba2">This field is required</p>
           </div>
         </section>
 
         <section id="email-user">
-          <label for="email">Email Address</label>
-          <input type="email" name="email" id="email" class="one-box" placeholder="email@ejemplo.com">
+          <p><label for="email">Email Address</label></p>
+          <input type="email" name="email" id="email" class="one-box mouse" placeholder="email@ejemplo.com">
           <p class="error">Please enter a valid email address</p>
         </section>  
 
           <p><label for="">Query Type</label></p>
         <section class="flex one-box" id="query">
           
-          <div class="two-box input-box">
-            <input type="radio" name="query-check" id="General-Enquiry" />
-            <label for="General-Enquiry">General Enquiry</label>
+          <div id="prueba" class="two-box input-box mouse" tabindex="-1">
+            <input type="radio" name="query-check" id="general-enquiry"/>
+            <label for="General-Enquiry" class="mouse">General Enquiry</label>
           </div>
 
-          <div class="two-box input-box" >
-            <input type="radio" name="query-check" id="Support-Request" />
-            <label for="Support-Request">Support Request</label>
+          <div class="two-box input-box mouse" tabindex="-1" >
+            <input type="radio" name="query-check" id="support-request"/>
+            <label for="Support-Request" class="mouse">Support Request</label>
           </div>
           
         </section>
         <p class="error">Please select a query type</p>
         
-        <section id="mensaje">
-          <p><label for="Message-client">Message</label></p>
-          <textarea name="Message-client" id="Message-client" class="one-box"></textarea>
+        <section id="mensaje" class="">
+          <label for="Message-client"class="mouse">Message</label>
+          <textarea name="Message-client" id="message-client" class="one-box mouse"></textarea>
           <p class="error">This field is required</p>
         </section>
 
         <section class="flex" id="consent-client">
-          <input type="checkbox" name="consent" id="consent">
-          <p>I consent to being contacted by t he team</p>
+          <input type="checkbox" name="consent" id="consent" class="mouse">
+          <label for="consent">I consent to being contacted by the team </label>
         </section>
         <p class="error">To submit this form, please consent to being contacted</p>
 
@@ -69,5 +69,6 @@
           soon!</output> -->
       </form>
     </main>
+    <script src="/index.js"></script>
   </body>
 </html>

@@ -28,7 +28,6 @@
 
 *{
   padding: 0px;
-  /* margin: 0px; */
   box-sizing: border-box;
   margin: 2px 0px ;
 }
@@ -71,8 +70,11 @@ p, label{
 /*          Input Boxes             */
 /* ================================ */
   
-  #Message-client {
-    height: 80px;
+  #message-client {
+    max-height: 80px;
+    min-height: 80px;
+    max-width: 100%;
+    min-width: 100%;
     padding-top: 6px;
   }
   
@@ -95,11 +97,6 @@ p, label{
   .two-box {
     width: 49%;
   }
-  
-
-  
-  /* ************************************* */
-  
 
 /* ================================ */
 /*       puntual Style              */
@@ -137,7 +134,7 @@ div.flex {
 
 
 button {
-  background-color: var(--green-medium-color);
+  background-color: var(--green-lighter-color);
   color: var(--white-color);
   width: 100%;
   height: 35px;
@@ -146,6 +143,61 @@ button {
   letter-spacing: 0.9px;
 }
 
+
+/* ================================ */
+/*       Hover and Focus            */
+/* ================================ */
+
+button:hover {
+  cursor: pointer;
+  /* background-color: var(--green-lighter-color); */
+  color: var(--white-color);
+  /* border: 1px solid var(--green-medium-color); */
+
+}
+
+
+.mouse:hover {
+  cursor: pointer;
+  border-color: var(--green-medium-color);
+}
+
+.mouse:focus {
+  background-color: var(--green-lighter-color);
+  border-color: var(--green-medium-color);
+  outline: none;
+  /* box-shadow: 0 0 5px var(--green-medium-color); */
+  
+}
+
+
+/* ================================ */
+/*     Images for Input Check        */
+/* ================================ */
+
+label[for="consent"] {
+  cursor: pointer;
+}
+
+
+input[type="checkbox"]:checked {
+  width: 15px;
+  height: 15px;
+  appearance: none;
+  background: url(/assets/images/icon-checkbox-check.svg)no-repeat center center;
+  background-size: cover;
+  border: none;
+}
+
+input[type="radio"]:checked {
+  width: 15px;
+  height: 15px;
+  appearance: none;
+  background: url(/assets/images/icon-radio-selected.svg);
+  background-size: cover;
+  border: none;
+
+}
 
 
 
