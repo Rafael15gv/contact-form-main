@@ -1,0 +1,151 @@
+/* ================================ */
+/*          Global Style            */
+/* ================================ */
+
+:root {
+  /* Color */
+  --green-lighter-color: hsl(148, 38%, 91%);
+  --green-medium-color:  hsl(169, 82%, 27%);
+  --red-color: hsl(0, 66%, 54%);
+  --gray-medium-color: hsl(186, 15%, 59%);
+  --gray-darker-color: hsl(187, 24%, 22%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("assets/fonts/Karla-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Karla-italic";
+  src: url("assets/fonts/Karla-Italic-VariableFont_wght.ttf");
+}
+
+/* ================================ */
+/*          Reset & Global          */
+/* ================================ */
+
+*{
+  padding: 0px;
+  /* margin: 0px; */
+  box-sizing: border-box;
+  margin: 2px 0px ;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--green-lighter-color);
+  font-family: "karla", sans-serif;
+  color: var(--gray-darker-color);
+  font-weight: 900px;
+}
+
+/* ================================ */
+/*       General Style              */
+/* ================================ */
+
+main {
+  background-color: var(--white-color);
+  border-radius: 15px;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+
+}
+
+section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p, label{
+  font-size: 0.75rem;
+}
+
+/* ================================ */
+/*          Input Boxes             */
+/* ================================ */
+  
+  #Message-client {
+    height: 80px;
+    padding-top: 6px;
+  }
+  
+  input, textarea, .input-box{
+    border: 1px solid var(--gray-medium-color);
+    border-radius: 3px;
+    padding-left: 15px;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .one-box {
+    width: 100%;
+    height: 35px;
+  }
+  
+  .two-box {
+    width: 49%;
+  }
+  
+
+  
+  /* ************************************* */
+  
+
+/* ================================ */
+/*       puntual Style              */
+/* ================================ */
+ .input-box {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+ }
+
+ input[type="radio"] {
+  margin-right: 8px;
+ }
+
+
+.error {          
+  color: red;
+  display: none; 
+}
+
+
+#consent-client {
+  justify-content: start;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+div.flex {
+  /* background-color: red; */
+  justify-content: center;
+}
+
+
+button {
+  background-color: var(--green-medium-color);
+  color: var(--white-color);
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  letter-spacing: 0.9px;
+}
+
+
+
+

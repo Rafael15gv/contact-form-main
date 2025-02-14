@@ -1,52 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <title>Frontend Mentor | Contact form</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"/>
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <body>
+    <main class="container">
+      <h2>Contact Us</h2>
+      <form action="">
+        <section class="flex" id="name">
+          <div class="two-box">
+            <p><label for="">First Name</label></p>
+            <input type="text" name="fname" id="fname" class="one-box" required>
+            <p class="error">This field is required</p>
+          </div>
+    
+          <div class="two-box">
+            <p><label for="">Last Name</label></p>
+            <input type="text" name="lname" id="lname" class="one-box" required>
+            <p class="error">This field is required</p>
+          </div>
+        </section>
 
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
-</head>
+        <section id="email-user">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" class="one-box" placeholder="email@ejemplo.com">
+          <p class="error">Please enter a valid email address</p>
+        </section>  
 
-<body>
+          <p><label for="">Query Type</label></p>
+        <section class="flex one-box" id="query">
+          
+          <div class="two-box input-box">
+            <input type="radio" name="query-check" id="General-Enquiry" />
+            <label for="General-Enquiry">General Enquiry</label>
+          </div>
 
-  <h2>Contact Us</h2>
+          <div class="two-box input-box" >
+            <input type="radio" name="query-check" id="Support-Request" />
+            <label for="Support-Request">Support Request</label>
+          </div>
+          
+        </section>
+        <p class="error">Please select a query type</p>
+        
+        <section id="mensaje">
+          <p><label for="Message-client">Message</label></p>
+          <textarea name="Message-client" id="Message-client" class="one-box"></textarea>
+          <p class="error">This field is required</p>
+        </section>
 
-  <h3>First Name</h3>
-  <p>This field is required</p>
+        <section class="flex" id="consent-client">
+          <input type="checkbox" name="consent" id="consent">
+          <p>I consent to being contacted by t he team</p>
+        </section>
+        <p class="error">To submit this form, please consent to being contacted</p>
 
-  <h3>Last Name</h3>
-  <p>This field is required</p>
-
-  <h3>Email Address</h3>
-  Please enter a valid email address
-  <p>This field is required</p>
-
-  <h3>Query Type</h3>
-  <h2>General Enquiry</h2>
-  <h2>Support Request</h2>
-  <p>Please select a query type</p>
-
-  Message
-  <p>This field is required</p>
-
-  I consent to being contacted by the team
-  <p>To submit this form, please consent to being contacted</p>
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="flex">
+          <button type="submit">Submit</button>
+        </div>
+        <!-- <output name="" for=""
+          >Message Sent! Thanks for completing the form. We'll be in touch
+          soon!</output> -->
+      </form>
+    </main>
+  </body>
 </html>
