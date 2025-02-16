@@ -12,58 +12,59 @@
   <body>
     <main class="container">
       <h2>Contact Us</h2>
-      <form action="" id="miFormulario">
-        <section class="flex" id="name">
-          <div class="two-box">
-            <p><label for="fname">First Name</label></p>
-            <input type="text" name="fname" id="fname" class="one-box mouse">
-            <p class="error" id="prueba">This field is required</p>
+      <form id="formulario">
+
+        <section class="column_2">
+          <div class="column_2--tamano">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" class="">
+            <p class="error" id="e_fname">This field is required</p>
           </div>
     
-          <div class="two-box">
-            <p><label for="">Last Name</label></p>
-            <input type="text" name="lname" id="lname" class="one-box mouse">
-            <p class="error" id="prueba2">This field is required</p>
+          <div class="column_2--tamano">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname">
+            <p class="error" id="e_lname">This field is required</p>
           </div>
         </section>
-
-        <section id="email-user">
-          <p><label for="email">Email Address</label></p>
-          <input type="email" name="email" id="email" class="one-box mouse" placeholder="email@ejemplo.com">
+        
+        <section class="column_1">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" placeholder="email@ejemplo.com">
           <p class="error">Please enter a valid email address</p>
+          <p class="error" id="prueba2">This field is required</p>
         </section>  
 
-          <p><label for="">Query Type</label></p>
-        <section class="flex one-box" id="query">
-          
-          <div id="prueba" class="two-box input-box mouse" tabindex="-1">
+        <label>Query Type</label>
+        <section class="column_2">
+          <div class="column_2--tamano centrado box">
             <input type="radio" name="query-check" id="general-enquiry"/>
-            <label for="General-Enquiry" class="mouse">General Enquiry</label>
+            <label for="general-enquiry" class="mouse">General Enquiry</label>
           </div>
 
-          <div class="two-box input-box mouse" tabindex="-1" >
+          <div class="column_2--tamano centrado box">
             <input type="radio" name="query-check" id="support-request"/>
-            <label for="Support-Request" class="mouse">Support Request</label>
+            <label for="support-request" class="mouse">Support Request</label>
           </div>
           
         </section>
         <p class="error">Please select a query type</p>
         
-        <section id="mensaje" class="">
+        <section class="column_1">
           <label for="Message-client"class="mouse">Message</label>
-          <textarea name="Message-client" id="message-client" class="one-box mouse"></textarea>
+          <textarea name="" id=""></textarea>
           <p class="error">This field is required</p>
         </section>
 
-        <section class="flex" id="consent-client">
-          <input type="checkbox" name="consent" id="consent" class="mouse">
+        <section class="centrado">
+          <input type="checkbox" name="consent" id="consent">
           <label for="consent">I consent to being contacted by the team </label>
         </section>
         <p class="error">To submit this form, please consent to being contacted</p>
 
-        <div class="flex">
+        <section class="btn">
           <button type="submit">Submit</button>
-        </div>
+        </section>
         <!-- <output name="" for=""
           >Message Sent! Thanks for completing the form. We'll be in touch
           soon!</output> -->
