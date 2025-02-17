@@ -7,6 +7,7 @@
   --green-lighter-color: hsl(148, 38%, 91%);
   --green-medium-color: hsl(169, 82%, 27%);
   --red-color: hsl(0, 66%, 54%);
+  --red-lighter-color: hsl(0, 66%, 85%);
   --gray-medium-color: hsl(186, 15%, 59%);
   --gray-darker-color: hsl(187, 24%, 22%);
   --white-color: hsl(0, 0%, 100%);
@@ -102,8 +103,10 @@ textarea,
 }
 
 input:hover,
+input[type="radio"]+label:hover,
 textarea:hover,
-.box:hover {
+.box:hover,
+button:hover {
   cursor: pointer;
   border-color: var(--gray-darker-color);
 }
@@ -134,6 +137,12 @@ textarea {
   font-size: 0.8rem;
 }
 
+.errorFocus {
+  background-color: var(--red-lighter-color);
+  border: 2px solid var(--red-color);
+  outline: none;
+}
+
 .centrado {
   display: flex;
   align-items: center;
@@ -157,7 +166,7 @@ input[type="checkbox"] {
   margin: 0px;
   border: none;
   border-radius: 5px;
-  background-color: var(--green-medium-color);
+  background-color: var(--gray-medium-color);
   color: var(--white-color);
   letter-spacing: 0.9px;
 }

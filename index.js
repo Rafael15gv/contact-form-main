@@ -1,75 +1,70 @@
-// let body = document.getElementsByTagName('body')[0];
+/*===============================================*/
+/*      Habilitar Button con el Check Box        */
+/*===============================================*/
 
-
-
-
-//CODIGO PARA DARLE COLOR AL BOTON CUANDO SE DA CLIC A CONSETN**********************************
 let boton = document.getElementsByTagName('button')[0];
 document.getElementById("consent").addEventListener("change", function() {
   if (this.checked) {
     boton.style.backgroundColor = "var(--green-medium-color)";
   } else {
-    boton.style.backgroundColor = "var(--green-lighter-color)";
+    boton.style.backgroundColor = "var(--gray-medium-color)";
     // document.body.style.backgroundColor = "white";
   }
 });
 
-
-
-
-
-
-
-
-//   // CODIGO PARA VALIDAR INFORMACION***************************************
+/*===============================================*/
+/*      CODIGO PARA VALIDAR INFORMACION          */
+/*===============================================*/
 
 document.getElementById("formulario").addEventListener("submit", function(event) {
   event.preventDefault(); // Evita que la página se recargue
   
-  let check = document.getElementsByTagName("input")[5].checked;
-  let nombre = document.getElementById("fname").value;
-  let apellido = document.getElementById("lname").value;
+  let name = document.getElementById("fname").value;
+  let lastName = document.getElementById("lname").value;
   let email = document.getElementById("email").value;
-  let enquiry = document.getElementById("general-enquiry").value;
-  let support = document.getElementById("support-request").value;
-  let mensaje = document.getElementById("message-client").value;
+  let message = document.getElementById("message-client").value;
+  let general = document.getElementById("consent").checked;
+  let support = document.getElementById("consent").checked;
+  let consent = document.getElementById("consent").checked;
   
-  let error = document.getElementById("prueba");
-  let error2 = document.getElementById("prueba2");
+  let e_fname = document.getElementById("e_fname");
+  let e_lname = document.getElementById("e_lname");
+  let e_email = document.getElementById("e_email");
+  let e_query = document.getElementById("e_query");
+  let e_message = document.getElementById("e_message");
+  // let e_consent = document.getElementById("e_consent");
   
-  if (check == true) {
-
-  
-
-            event.preventDefault();
-            if (nombre.trim() === "") {
-              // alert("El campo no puede esta vacio");
-              error.style.display = "block";
-              // error.classList.remove("error");
-            } if (apellido.trim() === "") {
-              // alert("El campo no puede esta vacio");
-              error2.style.display = "block";
-            } if (apellido.trim() === "") {
-              // alert("El campo no puede esta vacio");
-              error.style.display = "block";
-            }if (apellido.trim() === "") {
-              error.style.display = "block";
+  if (consent == true) {
+    event.preventDefault();
+            if (name.trim() === "") {
+              e_fname.style.display = "block";
+              // document.getElementById("fname").classList.add("errorFocus");
+            }
+            if (lastName.trim() === "") {
+              e_lname.style.display = "block";
+            } 
+            if (email.trim() === "") {
+              e_email.style.display = "block";
+            }
+            if (general == true && support == true ) {
+              e_query.style.display = "block";
+            }
+            if (message.trim() === "") {
+              e_message.style.display = "block";
             }  
             
             
-            
-            else {
-              alert("Formulario enviado con éxito!");
-              error.style.display = "none";
-              error2.style.display = "none";
-            }
+            // else {
+            //   alert("Formulario enviado con éxito!");
+            //   error.style.display = "none";
+            //   error2.style.display = "none";
+            // }
+            // alert(`
+            //   nombre: ${nombre} 
+            //   apellido ${apellido} 
+            //   correo ${email}`);
           }
           
 });
 
-
-// if (check == true) {
-
-  
-// }
 
