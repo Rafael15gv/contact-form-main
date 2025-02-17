@@ -54,7 +54,7 @@ document.getElementById("formulario").addEventListener("submit", function (event
       } else {
         validacion++;
       }
-      if (general == true && support == true) {
+      if (general == false && support == false) {
         e_query.style.display = "block";
       } else {
         validacion++;
