@@ -57,6 +57,7 @@ body {
   background-color: var(--white-color);
   border-radius: 15px;
   padding: 20px 30px;
+  order: 2;
 }
 
 section {
@@ -69,15 +70,28 @@ label {
 }
 
 #success {
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-wrap: wrap;
-  width: 300px;
-  padding: 20px 15px;
-
+  width: 350px;
+  height: 100px;
+  padding: 15px;
   background-color: rgb(0, 0, 0, 0.9);
   border-radius: 10px;
   color: var(--white-color);
   line-height: 30px;
+  order: 1;
+
+}
+
+#success p:last-child {
+  font-size: 0.8rem;
+  line-height: 15px;
+  margin-top: 7px;
+}
+
+#success strong {
+  padding-left: 10px;
 }
 
 /* ================================ */
