@@ -43,6 +43,7 @@ body {
   background-color: var(--green-lighter-color);
   font-family: "Karla", sans-serif;
   color: var(--gray-darker-color);
+  position: relative;
 }
 
 /* ================================ */
@@ -58,6 +59,7 @@ body {
   border-radius: 15px;
   padding: 20px 30px;
   order: 2;
+  z-index: 1;
 }
 
 section {
@@ -69,9 +71,10 @@ label {
   margin-bottom: 3px;
 }
 
-#success {
-  display: none;
-  /* display: flex; */
+.success {
+  position: absolute;
+  z-index: 1;
+  display: flex;
   flex-wrap: wrap;
   width: 350px;
   height: 100px;
@@ -81,18 +84,27 @@ label {
   color: var(--white-color);
   line-height: 30px;
   order: 1;
-
+  opacity: 30%;
+  transition: transform 0.3s linear, opacity 0.3s ease-in-out;
+  
 }
 
-#success p:last-child {
+.success p:last-child {
   font-size: 0.8rem;
   line-height: 15px;
   margin-top: 7px;
 }
 
-#success strong {
+.success strong {
   padding-left: 10px;
 }
+
+.desplazar {
+  transform: translateY(-250px);
+  opacity: 100%;
+  z-index: 2;
+}
+
 
 /* ================================ */
 /*       two column                 */
